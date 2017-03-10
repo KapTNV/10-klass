@@ -24,9 +24,15 @@
 """
 
 
-a = int(input("Введите число: "))
 
-b = a ** 0.5
-
-print(b)
-
+while True:
+    a = input("Введите число: ")
+    try:
+        if a == "Exit" or a == "exit":
+           break
+        b = int(a)
+        c = b ** 0.5
+        print(c)
+    except ValueError as err:
+        print(err)
+        continue
